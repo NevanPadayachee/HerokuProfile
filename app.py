@@ -6,14 +6,9 @@ from datetime import timedelta
 from werkzeug.utils import secure_filename
 
 UPLOAD_FOLDER = 'static'
-ALLOWED_EXTENSIONS = set(['png', 'jpg'])
-
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER']=UPLOAD_FOLDER
-
-def allow_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route("/")
 @app.route("/home")
