@@ -24,5 +24,9 @@ def Project1():
 def Project2():
     return render_template("Project2.html")
 
+@app.route("/Project3")
+def Project3():
+    return render_template("Project3.html")
+
 if __name__=="__main__":
     app.run(debug=True)
